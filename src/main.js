@@ -1,15 +1,17 @@
-import Vue from 'vue';
-import App from './App.vue';
-import './registerServiceWorker';
-import router from './router';
-import store from './store';
-import vuetify from './plugins/vuetify';
+import Vue from 'vue'
+import Vuesax from 'vuesax'
+import 'vuesax/dist/vuesax.css'
+import App from './App.vue'
+import './registerServiceWorker'
+import router from './router'
+import store from './store'
+import './plugins/vuesax.js'
 
-Vue.config.productionTip = false;
+Vue.config.productionTip = false
+Vue.use(Vuesax);
 
 new Vue({
   router,
   store,
-  vuetify,
-  render(h) { return h(App); },
-}).$mount('#app');
+  render: function (h) { return h(App) }
+}).$mount('#app')
